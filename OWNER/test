@@ -1,8 +1,0 @@
-
-<dependencies>
- <dependency>
-    <groupId>com.MHM-Services-Inventory.CSIMES</groupId>
-    <artifactId>test</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
-  </dependency>
-</dependencies>
