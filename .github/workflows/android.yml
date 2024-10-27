@@ -13,7 +13,7 @@ env:
 
 jobs:
   verification:
-    runs-on: ubuntu-22.04
+    runs-on:  ubuntu-latest
     steps:
       - name: Checkout local repository
         uses: actions/checkout@v4
