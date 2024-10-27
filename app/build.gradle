@@ -2,6 +2,7 @@ plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
     id 'java'
+    id 'maven-publish'
 }
 
 repositories {
@@ -55,4 +56,18 @@ task wtf(type: Javadoc) {
 
 artifacts {
     archives jar
+}
+publishing {
+  ...
+
+  repositories {
+    maven {
+      name = "OSSRH"
+      url = "https://oss.sonatype.org/service/local/staging/deploy/maven2/"
+      credentials {
+        username = System.getenv("MAVEN_USERNAME")
+        password = System.getenv("MAVEN_PASSWORD")
+      }
+    }
+  }
 }
